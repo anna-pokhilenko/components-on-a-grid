@@ -1,9 +1,9 @@
 html {
   box-sizing: border-box;
-  font-family: serif;
+  font-family: Georgia, serif;
   font-size: 2rem;
   line-height: 1.5;
-  margin: .5rem;
+  margin: 1rem;
   background-color: #f2f1ed;
 }
 
@@ -17,12 +17,9 @@ body {
   margin: 0;
 }
 
-img {
-  width: 100%;
-}
-
 header {
   /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
+  display: contents;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -31,6 +28,7 @@ header {
 img {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
+  width: 100%;
 }
 
 h1 {
@@ -39,21 +37,24 @@ h1 {
   z-index: 1;
   margin-bottom: 0;
   max-width: 14rem;
+  padding-right: 2rem;
 }
 
 h2 {
   font-family: "Patua One", sans-serif;
-  margin: 0;
+  margin: .5rem 0 0;
   color: #30658d;
-  font-size: .95rem;
+  font-size: .75em;
 }
 
 p {
   margin: 0;
-  font-size: .7rem;
+  font-size: .5em;
+  margin-bottom: 1em;
 }
 
 nav {
+  padding-right: 1rem;
   grid-column: 3 / -1;
   grid-row: 1;
 }
@@ -62,6 +63,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  list-style: none;
 }
 
 li a {
@@ -70,14 +72,10 @@ li a {
   color: #fff;
 }
 
-ul {
-  list-style: none;
-}
-
 main {
   display: grid;
-  grid-template-areas:
-  "area1 area2";
+  display: flex;
+  grid-template-areas: "area1 area2";
   padding: 0;
 }
 
@@ -94,7 +92,5 @@ main > figure:nth-child(2) {
 }
 
 figure {
-  margin-left: 0;
-  margin-right: 0;
   margin: .5rem;
 }
